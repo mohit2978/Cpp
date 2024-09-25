@@ -11,11 +11,16 @@ int main() {
     orderedMap[1] = "One";
     orderedMap[2] = "Two";
     orderedMap[3] = "Three";
+    orderedMap.insert({4,"four"});
 
     // 3. Displaying elements using an iterator
     cout << "Ordered Map Elements:" << endl;
     for (map<int, string>::iterator it = orderedMap.begin(); it != orderedMap.end(); ++it) {
         cout << it->first << ": " << it->second << endl;
+    }
+    //3.1. displaying uisng pair
+    for (auto &pair:orderedMap) {
+        cout << pair.first << ": " << pair.second << endl;
     }
 
     // 4. Accessing elements
@@ -28,7 +33,7 @@ int main() {
         cout << "Key 4 not found" << endl;
     }
 
-    // 6. Removing an element
+    // 6. Removing an element always do first find and then delete
     orderedMap.erase(2);
     cout << "Ordered Map after removing key 2:" << endl;
     for (auto& pair : orderedMap) {

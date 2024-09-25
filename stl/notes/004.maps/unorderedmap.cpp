@@ -37,6 +37,6 @@ int main() {
 
     // 7. Checking the size of the unordered map
     cout << "Size of the unordered map: " << unorderedMap.size() << endl;
-
+    //here just tc is O(1) where as in orderemap tc of insert seacrh delete is O(log n)
     return 0;
 }
